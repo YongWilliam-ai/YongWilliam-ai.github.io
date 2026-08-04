@@ -13,7 +13,6 @@ import {
   CalendarDays,
   ChevronRight,
   Code2,
-  Download,
   ExternalLink,
   FileText,
   Github,
@@ -155,11 +154,6 @@ export default function Home() {
   const [formNotice, setFormNotice] = useState("");
 
   const typeLine = "Research-backed systems for markets, product, and emerging technology.";
-  const isGithubPages =
-    typeof window !== "undefined" && window.location.hostname.endsWith("github.io");
-  const cvHref = isGithubPages
-    ? "/assets/William_Yong_CV.pdf"
-    : "https://github.com/YongWilliam-ai/YongWilliam-ai.github.io/raw/refs/heads/main/assets/William_Yong_CV.pdf";
 
   useEffect(() => {
     document.documentElement.dataset.theme = isLight ? "light" : "dark";
@@ -328,9 +322,6 @@ export default function Home() {
                 <button className="button button-primary" type="button" onClick={() => scrollTo("projects")}>
                   Trace selected work <ArrowDown size={16} />
                 </button>
-                <a className="button button-secondary" href={cvHref} download="William_Yong_CV.pdf">
-                  <Download size={16} /> Open CV
-                </a>
               </div>
               <dl className="hero-credentials">
                 <div>
