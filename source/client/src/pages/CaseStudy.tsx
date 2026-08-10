@@ -1,5 +1,6 @@
 /** Signal Path case-study template: short, evidence-led project records with direct public resources. */
 import { ArrowLeft, ArrowUpRight, FileText, Github, Globe2, Lightbulb, ShieldCheck, Wrench } from "lucide-react";
+import WXYMark from "../components/WXYMark";
 
 type CaseLink = { label: string; href: string; kind: "product" | "github" | "deck" };
 type Study = {
@@ -87,7 +88,7 @@ export default function CaseStudy() {
   return (
     <div className={`app-shell case-page ${study.profile === "AI Engineering" ? "case-ai" : "case-markets"}`}>
       <header className="case-header">
-        <a className="brand" href={backHref}><span className="brand-sigil case-vector-sigil"><b aria-hidden="true" /><i aria-hidden="true" /><em aria-hidden="true" /></span><span className="brand-copy"><strong>William Yong</strong><small>Case Studies / Evidence Record</small></span></a>
+        <a className="brand" href={backHref}><span className="brand-sigil"><WXYMark variant={study.profile === "Markets" ? "markets" : "ai"} /></span><span className="brand-copy"><strong>William Yong</strong><small>Case Studies / Evidence Record</small></span></a>
         <nav className="case-profile-nav" aria-label="Profile navigation"><a className={study.profile === "Markets" ? "is-active" : ""} href="/">Markets</a><a className={study.profile === "AI Engineering" ? "is-active" : ""} href="/ai/">AI Engineering</a></nav>
       </header>
       <main className="case-main">

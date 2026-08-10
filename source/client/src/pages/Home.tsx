@@ -11,6 +11,7 @@ import {
   BarChart3,
   Blocks,
   CalendarDays,
+  ChevronDown,
   ChevronRight,
   Code2,
   ExternalLink,
@@ -28,8 +29,9 @@ import {
   Trophy,
   X,
 } from "lucide-react";
+import WXYMark from "../components/WXYMark";
 
-type AssetKey = "hero" | "polyalpha" | "quant" | "fencing" | "mark";
+type AssetKey = "hero" | "polyalpha" | "quant" | "fencing";
 
 const navItems = [
   { label: "About", id: "about" },
@@ -44,7 +46,6 @@ const assetFiles: Record<AssetKey, string> = {
   polyalpha: "polyalpha-vault-visual_fc3dcaee.png",
   quant: "quant-research-visual_b4b35ff3.png",
   fencing: "fencing-signal-visual_036ce8d4.png",
-  mark: "william-signal-mark_89e972c4.png",
 };
 
 const githubAssets: Record<AssetKey, string> = {
@@ -52,7 +53,6 @@ const githubAssets: Record<AssetKey, string> = {
   polyalpha: "polyalpha-vault-visual.webp",
   quant: "quant-research-visual.webp",
   fencing: "fencing-signal-visual.webp",
-  mark: "william-signal-mark.webp",
 };
 
 const experience = [
@@ -75,7 +75,7 @@ const experience = [
     evidence: "63 offline events / 10 regression tests",
   },
   {
-    period: "Oct 2025–Present",
+    period: "Mar 2026–Present",
     company: "Futu Securities",
     role: "Global Campus Ambassador, HKUST",
     status: "Markets education",
@@ -237,13 +237,10 @@ export default function Home() {
 
       <header className="site-header">
         <a className="brand" href="#home" onClick={() => scrollTo("home")}>
-          <span className="brand-sigil">
-            <img className="brand-mark" src={getAsset("mark")} alt="WY signal mark" />
-            <i aria-hidden="true" />
-          </span>
+          <span className="brand-sigil"><WXYMark variant="markets" /></span>
           <span className="brand-copy">
             <strong>William Yong</strong>
-            <small>WY / Signal Path</small>
+            <small>WXY / Markets Research</small>
           </span>
         </a>
 
@@ -265,7 +262,7 @@ export default function Home() {
 
         <nav className="profile-switch" aria-label="Portfolio profile">
           <a className="is-active" href="/" aria-current="page">Markets</a>
-          <a href="/ai/">AI Engineering</a>
+          <a href="/ai/">AI Ops</a>
         </nav>
 
         <div className="header-actions">
@@ -319,7 +316,8 @@ export default function Home() {
                 <span className="pulse-dot" />
                 Hong Kong · Global perspective
               </div>
-              <p className="hero-discipline">QUANT RESEARCH · FINTECH · AI PRODUCT · WEB3</p>
+              <p className="hero-discipline">MARKETS RESEARCH &amp; OPERATIONS · FINTECH · INVESTOR EDUCATION</p>
+              <p className="profile-lens">PROFILE 01 / SELL-SIDE MARKETS · RESEARCH → OPERATIONS → CLIENT CONTEXT</p>
               <h1>
                 <span>William Yong</span>
                 <strong>Turning signals into systems.</strong>
@@ -431,25 +429,19 @@ export default function Home() {
           </div>
           <div className="section-heading experience-heading" data-reveal>
             <p className="overline">A growing operator&apos;s record</p>
-            <h2>From market education to evidence-aware AI systems.</h2>
+            <h2>Market context, data systems, and disciplined execution.</h2>
           </div>
           <div className="experience-list">
             {experience.map((item, index) => (
-              <article className="experience-entry" data-reveal key={`${item.company}-${item.role}`}>
-                <div className="experience-marker" aria-hidden="true">
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                </div>
-                <div className="experience-meta">
-                  <p>{item.period}</p>
-                  <span>{item.status}</span>
-                </div>
-                <div className="experience-content">
-                  <p className="company-name">{item.company}</p>
-                  <h3>{item.role}</h3>
-                  <p>{item.description}</p>
-                  <span className="experience-evidence"><Activity size={12} /> {item.evidence}</span>
-                </div>
-              </article>
+              <details className="experience-entry experience-disclosure" data-reveal key={`${item.company}-${item.role}`}>
+                <summary>
+                  <span className="experience-marker" aria-hidden="true"><span>{String(index + 1).padStart(2, "0")}</span></span>
+                  <span className="experience-meta"><p>{item.period}</p><span>{item.status}</span></span>
+                  <span className="experience-summary"><span className="company-name">{item.company}</span><strong>{item.role}</strong><em>{item.evidence}</em></span>
+                  <ChevronDown className="experience-chevron" size={17} aria-hidden="true" />
+                </summary>
+                <div className="experience-detail"><p>{item.description}</p><span className="experience-evidence"><Activity size={12} /> Evidence record: {item.evidence}</span></div>
+              </details>
             ))}
           </div>
         </section>
@@ -600,7 +592,7 @@ export default function Home() {
               <article className="context-row"><span>LEADERSHIP</span><h3>President, HKUST Fencing Team &amp; Club</h3><p>Jan 2025–Jan 2028 · 10+ years of competitive épée; led campus classes and initiatives, earned the HKUST Men&apos;s Fencing Team Outstanding Contribution Award, and brings national-team and Level 3 trainee-referee discipline to decision-making under pressure.</p></article>
               <article className="context-row"><span>COMMUNITY OPERATIONS</span><h3>External Vice President, Federation of Macau Students in Hong Kong</h3><p>Nov 2024–Nov 2025 · Managed a HK$50,000+ budget, organised five events for 300+ participants, and established 10+ partnerships across businesses and universities.</p></article>
               <article className="context-row"><span>INSTITUTIONAL REPRESENTATION</span><h3>Student Ambassador, URAO</h3><p>Selected from 300+ applicants to represent HKUST at high-profile recruitment events; a stakeholder-facing complement to the markets and product narrative.</p></article>
-              <article className="context-row"><span>ACADEMIC BASE</span><h3>HKUST RMBI + Mathematics Minor</h3><p>GPA 3.871; Dean&apos;s List, Beyond Academic Admissions Scholarship, and HKGCC Scholarship for Innovation and Creativity. Relevant work spans financial services, risk, factor models, blockchain programming, and venture-building.</p></article>
+              <article className="context-row"><span>ACADEMIC BASE</span><h3>HKUST RMBI + Mathematics Minor</h3><p>GPA 3.871; 2024 Fall Dean&apos;s List, Beyond Academic Admissions Scholarship, and HKGCC Scholarship for Innovation and Creativity. Relevant work spans financial services, risk, factor models, blockchain programming, and venture-building.</p></article>
               <article className="context-row"><span>EARLY DISTINCTION</span><h3>Quantitative and engineering foundations</h3><p>BPhO Gold, FISO International Round Gold, Mathematics &amp; AI Excellence Award, and University of Toronto DEEP coursework in computer vision, data analytics, and applied engineering science.</p></article>
             </div>
           </div>
@@ -699,11 +691,8 @@ export default function Home() {
       </main>
 
       <footer className="site-footer">
-        <div className="footer-brand">
-          <img src={getAsset("mark")} alt="" />
-          <span>William Yong / Signal Path</span>
-        </div>
-        <p>Built as a static, accessible Markets portfolio. © {new Date().getFullYear()} William Yong.</p>
+        <div className="footer-brand"><WXYMark variant="markets" decorative /><span>William Yong / Markets Research</span></div>
+        <div className="global-context"><span className="global-context-label">CITIZENSHIP &amp; HOME REGIONS</span><p>Born in Australia · Raised in Macau · Studying in Hong Kong</p><div className="flag-row" aria-label="Canada, Australia, Portugal, Macao, and Hong Kong"><span title="Canada">🇨🇦</span><span title="Australia">🇦🇺</span><span title="Portugal">🇵🇹</span><span title="Macao">🇲🇴</span><span title="Hong Kong">🇭🇰</span></div></div>
         <div className="footer-links">
           <a href="https://github.com/YongWilliam-ai" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/william-yong-profile" target="_blank" rel="noreferrer">LinkedIn</a>

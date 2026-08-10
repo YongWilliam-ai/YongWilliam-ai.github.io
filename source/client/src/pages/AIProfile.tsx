@@ -12,6 +12,7 @@ import {
   Bot,
   BrainCircuit,
   BriefcaseBusiness,
+  ChevronDown,
   ChevronRight,
   Code2,
   Cpu,
@@ -33,20 +34,19 @@ import {
   Workflow,
   X,
 } from "lucide-react";
+import WXYMark from "../components/WXYMark";
 
-type AssetKey = "hero" | "mark" | "rxcode";
+type AssetKey = "hero" | "rxcode";
 type ExperienceTrack = "all" | "engineering" | "operations" | "leadership";
 type AgentMode = "build" | "review" | "deploy";
 
 const assetFiles: Record<AssetKey, string> = {
   hero: "/manus-storage/william-hero-signal-field_756afc4e.png",
-  mark: "/manus-storage/william-signal-mark_89e972c4.png",
   rxcode: "/manus-storage/rxcode-agent-control-demo_2b76d471.png",
 };
 
 const githubAssets: Record<AssetKey, string> = {
   hero: "william-hero-signal-field.webp",
-  mark: "william-signal-mark.webp",
   rxcode: "rxcode-agent-control-demo.png",
 };
 
@@ -96,6 +96,15 @@ const experience = [
     evidence: "63 validated events / 10 passing regression tests",
   },
   {
+    track: "operations" as const,
+    period: "Mar 2026–Present",
+    company: "Futu Securities",
+    role: "Global Campus Ambassador, HKUST",
+    status: "Investor education",
+    description: "Supports campus investor education and engagement for an SFC-regulated securities firm, translating financial-product context into an accessible user-facing experience.",
+    evidence: "Campus education / regulated-finance context",
+  },
+  {
     track: "engineering" as const,
     period: "Dec 2025–Jan 2026",
     company: "United Technologies (Int’l) Ltd.",
@@ -112,15 +121,6 @@ const experience = [
     status: "Data + automation",
     description: "Built Python data pipelines across 100k+ transactions, forecasting tools, automated dashboards, and n8n workflows connecting CRM and customer-service operations.",
     evidence: "100k+ records / 15% inventory-turnover improvement",
-  },
-  {
-    track: "operations" as const,
-    period: "Oct 2025–Present",
-    company: "Futu Securities",
-    role: "Global Campus Ambassador, HKUST",
-    status: "Investor education",
-    description: "Supports campus investor education and engagement for an SFC-regulated securities firm, translating financial-product context into an accessible user-facing experience.",
-    evidence: "Campus education / regulated-finance context",
   },
   {
     track: "operations" as const,
@@ -213,8 +213,8 @@ export default function AIProfile() {
       <div className="ambient-orb ambient-orb-two" aria-hidden="true" />
       <header className="site-header ai-site-header">
         <a className="brand" href="#home" onClick={() => scrollTo("home")}>
-          <span className="brand-sigil"><img className="brand-mark" src={getAsset("mark")} alt="WY signal mark" /><i aria-hidden="true" /></span>
-          <span className="brand-copy"><strong>William Yong</strong><small>WY / Agent Operations</small></span>
+          <span className="brand-sigil"><WXYMark variant="ai" /></span>
+          <span className="brand-copy"><strong>William Yong</strong><small>WXY / Agent Systems</small></span>
         </a>
         <nav className="desktop-nav" aria-label="AI profile navigation">{navItems.map((item) => <a key={item.id} href={`#${item.id}`} className={activeSection === item.id ? "is-active" : ""} onClick={(event) => { event.preventDefault(); scrollTo(item.id); }}>{item.label}</a>)}</nav>
         <nav className="profile-switch" aria-label="Portfolio profile"><a href="/">Markets</a><a className="is-active" href="/ai/" aria-current="page">AI Ops</a></nav>
@@ -225,7 +225,7 @@ export default function AIProfile() {
       <main>
         <div className="signal-rail ai-signal-rail" aria-hidden="true"><span /></div>
         <section id="home" className="hero ai-console-hero section-anchor" data-section>
-          <div className="ai-route-bar" data-reveal><span><Activity size={14} /> AGENT OPERATIONS CONSOLE</span><span>PROFILE 02 / AI ENGINEERING</span><a href="/">Switch to Markets <ArrowUpRight size={14} /></a></div>
+          <div className="ai-route-bar" data-reveal><span><Activity size={14} /> AI ENGINEERING &amp; AGENT SYSTEMS</span><span>PROFILE 02 / BUILD · REVIEW · DEPLOY</span><a href="/">Markets Research &amp; Operations <ArrowUpRight size={14} /></a></div>
           <div className="hero-layout ai-console-layout">
             <div className="hero-copy" data-reveal>
               <div className="eyebrow"><span className="pulse-dot" /> Hong Kong · AI systems</div>
@@ -236,7 +236,7 @@ export default function AIProfile() {
               <p className="hero-intro">HKUST RMBI student and technical product builder working across LLM-enabled operations, agent-control workflows, multimodal evidence systems, data automation, and AI-native developer tools.</p>
               <div className="agent-mode-tabs" role="tablist" aria-label="Agent operating modes">{(Object.keys(agentModes) as AgentMode[]).map((key) => <button className={agentMode === key ? "is-active" : ""} key={key} role="tab" aria-selected={agentMode === key} type="button" onClick={() => setAgentMode(key)}><span>{agentModes[key].code.split(" / ")[1]}</span>{agentModes[key].label}</button>)}</div>
               <div className="hero-actions"><button className="button button-primary" type="button" onClick={() => scrollTo("projects")}>Inspect AI work <ArrowDown size={16} /></button><a className="button button-secondary" href="https://github.com/YongWilliam-ai" target="_blank" rel="noreferrer">GitHub profile <Github size={16} /></a></div>
-              <dl className="hero-credentials"><div><dt>Current role</dt><dd>Sport AI Agent Intern</dd></div><div><dt>System posture</dt><dd>Evidence + review</dd></div><div><dt>Product route</dt><dd>RxCode co-founder</dd></div></dl>
+              <dl className="hero-credentials"><div><dt>Current profile</dt><dd>HKUST RMBI student</dd></div><div><dt>System posture</dt><dd>Evidence + review</dd></div><div><dt>Product route</dt><dd>RxCode co-founder</dd></div></dl>
             </div>
             <aside className="agent-console-panel" data-reveal aria-label="Interactive AI operations console">
               <div className="console-panel-top"><span><Network size={15} /> LIVE CONTROL SURFACE</span><span className="console-live-dot">ACTIVE</span></div>
@@ -256,7 +256,7 @@ export default function AIProfile() {
         <section id="experience" className="section experience-section ai-experience-section section-anchor" data-section>
           <div className="section-label" data-reveal><span>02</span><p>Experience / operating record</p><em>NODE AI-02 / MULTI-DOMAIN</em></div>
           <div className="projects-heading-row" data-reveal><div className="section-heading experience-heading"><p className="overline">Technical systems need context beyond the model</p><h2>Engineering, operations, and leadership in one working record.</h2></div><div className="experience-filter" role="tablist" aria-label="Experience filters">{(["all", "engineering", "operations", "leadership"] as ExperienceTrack[]).map((track) => <button key={track} type="button" className={experienceTrack === track ? "is-active" : ""} onClick={() => setExperienceTrack(track)}>{track === "all" ? "All" : track}</button>)}</div></div>
-          <div className="experience-list">{visibleExperience.map((item, index) => <article className="experience-entry" data-reveal key={`${item.company}-${item.role}`}><div className="experience-marker" aria-hidden="true"><span>{String(index + 1).padStart(2, "0")}</span></div><div className="experience-meta"><p>{item.period}</p><span>{item.status}</span></div><div className="experience-content"><p className="company-name">{item.company}</p><h3>{item.role}</h3><p>{item.description}</p><span className="experience-evidence"><Activity size={12} /> {item.evidence}</span></div></article>)}</div>
+          <div className="experience-list" aria-live="polite">{visibleExperience.map((item, index) => <details className="experience-entry experience-disclosure ai-experience-disclosure is-revealed" key={`${item.company}-${item.role}`}><summary><span className="experience-marker" aria-hidden="true"><span>{String(index + 1).padStart(2, "0")}</span></span><span className="experience-meta"><p>{item.period}</p><span>{item.status}</span></span><span className="experience-summary"><span className="company-name">{item.company}</span><strong>{item.role}</strong><em>{item.evidence}</em></span><ChevronDown className="experience-chevron" size={17} aria-hidden="true" /></summary><div className="experience-detail"><p>{item.description}</p><span className="experience-evidence"><Activity size={12} /> Evidence record: {item.evidence}</span></div></details>)}</div>
         </section>
 
         <section id="projects" className="section projects-section section-anchor" data-section>
@@ -273,11 +273,11 @@ export default function AIProfile() {
 
         <section id="skills" className="section skills-section section-anchor" data-section><div className="section-label" data-reveal><span>04</span><p>Toolkit / technical foundations</p><em>NODE AI-04 / BUILD RANGE</em></div><div className="skills-layout"><div className="section-heading" data-reveal><p className="overline">Capability becomes useful when it is reviewable</p><h2>Build quickly. Make the work inspectable.</h2><div className="skills-ledger"><span>METHOD</span><strong>Evidence → agent → review</strong><span>FOUNDATION</span><strong>HKUST RMBI + Math minor</strong><span>EARLY WORK</span><strong>Computer vision + data analytics</strong></div></div><div className="skill-groups" data-reveal>{skills.map((group) => { const Icon = group.icon; return <article className="skill-group" key={group.label}><div className="skill-group-heading"><Icon size={18} /><h3>{group.label}</h3></div><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul></article>; })}</div></div></section>
 
-        <section className="section ai-evidence-section"><div className="section-label" data-reveal><span>05</span><p>Foundations / leadership range</p><em>NODE AI-05 / CONTEXT</em></div><div className="ai-evidence-grid"><article data-reveal><GraduationCap size={21} /><span>EDUCATION</span><h3>Engineering foundations with a business-intelligence lens.</h3><p>HKUST RMBI + Mathematics minor; GPA 3.871, Dean&apos;s List, HKGCC innovation scholarship. Earlier computer-vision and data-analytics study at University of Toronto DEEP.</p></article><article data-reveal><Flag size={21} /><span>COMPETITIVE DISCIPLINE</span><h3>10+ years of épée taught precise operating habits.</h3><p>HKUST Fencing Team &amp; Club President, Macau junior national-team athlete, and Level 3 trainee referee. The habit: observe, decide, and own the consequence.</p></article><article data-reveal><UsersRound size={21} /><span>STAKEHOLDER OPERATIONS</span><h3>Community work with budgets, partners, and delivery pressure.</h3><p>Federation of Macau Students in Hong Kong: HK$50,000+ budget, five events, 300+ participants, and 10+ partnerships. URAO Student Ambassador selected from 300+ applicants.</p></article></div></section>
+        <section className="section ai-evidence-section"><div className="section-label" data-reveal><span>05</span><p>Foundations / leadership range</p><em>NODE AI-05 / CONTEXT</em></div><div className="ai-evidence-grid"><article data-reveal><GraduationCap size={21} /><span>EDUCATION</span><h3>Engineering foundations with a business-intelligence lens.</h3><p>HKUST RMBI + Mathematics minor; GPA 3.871, 2024 Fall Dean&apos;s List, HKGCC innovation scholarship. Earlier computer-vision and data-analytics study at University of Toronto DEEP.</p></article><article data-reveal><Flag size={21} /><span>COMPETITIVE DISCIPLINE</span><h3>10+ years of épée taught precise operating habits.</h3><p>HKUST Fencing Team &amp; Club President, Macau junior national-team athlete, and Level 3 trainee referee. The habit: observe, decide, and own the consequence.</p></article><article data-reveal><UsersRound size={21} /><span>STAKEHOLDER OPERATIONS</span><h3>Community work with budgets, partners, and delivery pressure.</h3><p>Federation of Macau Students in Hong Kong: HK$50,000+ budget, five events, 300+ participants, and 10+ partnerships. URAO Student Ambassador selected from 300+ applicants.</p></article></div></section>
 
         <section id="contact" className="section contact-section section-anchor" data-section><div className="section-label" data-reveal><span>06</span><p>Contact / open channel</p><em>NODE AI-06 / T+04</em></div><div className="contact-layout"><div className="contact-copy" data-reveal><p className="overline">For agent systems, AI engineering, and technical product work</p><h2>Let&apos;s make the control loop clearer.</h2><p>If you are building an AI product, an agent workflow, or a system that needs more reliable evidence, I&apos;m interested in the operating constraints as much as the model choice.</p><div className="contact-direct-links"><a href="mailto:yongwilliam15@gmail.com"><Mail size={16} /> yongwilliam15@gmail.com</a><a href="https://github.com/YongWilliam-ai" target="_blank" rel="noreferrer"><Github size={16} /> github.com/YongWilliam-ai</a><a href="https://code.rxlab.app/" target="_blank" rel="noreferrer"><Globe2 size={16} /> code.rxlab.app</a></div><p className="location-line"><MapPin size={15} /> Hong Kong · HKUST · AI Engineering / AI Agents</p></div><aside className="ai-contact-panel" data-reveal><span>ROUTE STATUS</span><strong>OPEN TO TECHNICAL COLLABORATION</strong><p>Send a concise note with the system, the constraint, and the decision that needs to be made.</p><a className="share-link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fyongwilliam-ai.github.io%2Fai%2F" target="_blank" rel="noreferrer"><Share2 size={15} /> Share AI profile</a><a href="mailto:yongwilliam15@gmail.com?subject=AI%20Engineering%20Portfolio%20Inquiry">Email William <ArrowUpRight size={16} /></a></aside></div></section>
       </main>
-      <footer className="site-footer"><div className="footer-brand"><img src={getAsset("mark")} alt="" /><span>William Yong / Agent Operations</span></div><p>Built as a static, accessible AI Engineering portfolio. © {new Date().getFullYear()} William Yong.</p><div className="footer-links"><a href="/">Markets profile</a><a href="https://github.com/YongWilliam-ai" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:yongwilliam15@gmail.com">Email</a></div></footer>
+      <footer className="site-footer"><div className="footer-brand"><WXYMark variant="ai" decorative /><span>William Yong / AI Agent Systems</span></div><div className="global-context"><span className="global-context-label">CITIZENSHIP &amp; HOME REGIONS</span><p>Born in Australia · Raised in Macau · Studying in Hong Kong</p><div className="flag-row" aria-label="Canada, Australia, Portugal, Macao, and Hong Kong"><span title="Canada">🇨🇦</span><span title="Australia">🇦🇺</span><span title="Portugal">🇵🇹</span><span title="Macao">🇲🇴</span><span title="Hong Kong">🇭🇰</span></div></div><div className="footer-links"><a href="/">Markets profile</a><a href="https://github.com/YongWilliam-ai" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:yongwilliam15@gmail.com">Email</a></div></footer>
     </div>
   );
 }
