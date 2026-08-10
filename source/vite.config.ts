@@ -230,6 +230,11 @@ export default defineConfig({
       input: {
         main: path.resolve(import.meta.dirname, "client", "index.html"),
         ai: path.resolve(import.meta.dirname, "client", "ai", "index.html"),
+        caseRxcode: path.resolve(import.meta.dirname, "client", "case", "rxcode", "index.html"),
+        caseSportAI: path.resolve(import.meta.dirname, "client", "case", "sport-ai", "index.html"),
+        casePolyalpha: path.resolve(import.meta.dirname, "client", "case", "polyalpha", "index.html"),
+        caseStubase: path.resolve(import.meta.dirname, "client", "case", "stubase", "index.html"),
+        caseRmbiAlpha: path.resolve(import.meta.dirname, "client", "case", "rmbi-alpha", "index.html"),
       },
     },
   },

@@ -101,6 +101,15 @@ const experience = [
       "Built Python and SQL pipelines across 100k+ transactions; forecasting work reduced inventory turnover time by 15% and automation delivered measurable operational savings.",
     evidence: "100k+ transactions / 15% turnover-time reduction",
   },
+  {
+    period: "Summer 2024",
+    company: "CTM — Companhia de Telecomunicações de Macau",
+    role: "Summer Trainee, Youth Development Program",
+    status: "Commercial operations",
+    description:
+      "Supported a charity livestream campaign for a disability-support enterprise, converted 10+ telecom contracts in one week, and gained exposure to B2C/B2B commercial cycles, fibre and 5G operations, and compliance context.",
+    evidence: "10+ contract conversions / telecom operations exposure",
+  },
 ];
 
 const skills = [
@@ -489,6 +498,7 @@ export default function Home() {
                     <a href="https://polyalpha-dashboard.vercel.app/" target="_blank" rel="noreferrer"><Globe2 size={15} /> Testnet</a>
                     <a href="https://github.com/YongWilliam-ai/polyalpha-protocol" target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
                     <a href="/decks/polyalpha-protocol-pitch.pdf" target="_blank" rel="noreferrer"><FileText size={15} /> Deck</a>
+                    <a href="/case/polyalpha/"><ArrowUpRight size={15} /> Case study</a>
                   </div>
                 </div>
               </div>
@@ -517,7 +527,7 @@ export default function Home() {
                 </div>
                 <div className="project-footer">
                   <span>Python · pandas · scikit-learn</span>
-                  <span className="muted-detail">Research build</span>
+                  <div className="project-actions"><span className="muted-detail">Research build</span><a href="/case/rmbi-alpha/"><ArrowUpRight size={15} /> Case study</a></div>
                 </div>
               </div>
             </article>
@@ -540,6 +550,7 @@ export default function Home() {
                   <div className="project-actions">
                     <a href="https://stubase.xyz/" target="_blank" rel="noreferrer"><Globe2 size={15} /> Product</a>
                     <a href="https://github.com/YongWilliam-ai/stubase2026" target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
+                    <a href="/case/stubase/"><ArrowUpRight size={15} /> Case study</a>
                   </div>
                 </div>
               </div>
@@ -564,6 +575,7 @@ export default function Home() {
                     <a href="https://code.rxlab.app/" target="_blank" rel="noreferrer"><Globe2 size={15} /> Product</a>
                     <a href="https://github.com/rxtech-lab/rxcode" target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
                     <a href="/decks/rxcode-dream-builder-pitch.pdf" target="_blank" rel="noreferrer"><FileText size={15} /> Deck</a>
+                    <a href="/case/rxcode/"><ArrowUpRight size={15} /> Case study</a>
                   </div>
                 </div>
               </div>
@@ -573,6 +585,25 @@ export default function Home() {
             <FileText size={15} /> Metrics are framed as research or database-reported results where
             applicable; they are not claims of live trading or production investment performance.
           </p>
+        </section>
+
+        <section className="section context-section" aria-labelledby="markets-context-title">
+          <div className="section-label" data-reveal><span>04</span><p>Operating context / credibility ledger</p><em>NODE 04 / T+03</em></div>
+          <div className="context-layout">
+            <div className="section-heading" data-reveal>
+              <p className="overline">Market judgement also needs operating range</p>
+              <h2 id="markets-context-title">The context behind the research profile.</h2>
+              <p className="context-intro">This route prioritises markets, but it should also show the leadership, education, and execution discipline that make the work credible in a live operating environment.</p>
+              <a className="share-link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fyongwilliam-ai.github.io%2F" target="_blank" rel="noreferrer">Share Markets profile on LinkedIn <Linkedin size={15} /></a>
+            </div>
+            <div className="context-ledger" data-reveal>
+              <article className="context-row"><span>LEADERSHIP</span><h3>President, HKUST Fencing Team &amp; Club</h3><p>Jan 2025–Jan 2028 · 10+ years of competitive épée; led campus classes and initiatives, earned the HKUST Men&apos;s Fencing Team Outstanding Contribution Award, and brings national-team and Level 3 trainee-referee discipline to decision-making under pressure.</p></article>
+              <article className="context-row"><span>COMMUNITY OPERATIONS</span><h3>External Vice President, Federation of Macau Students in Hong Kong</h3><p>Nov 2024–Nov 2025 · Managed a HK$50,000+ budget, organised five events for 300+ participants, and established 10+ partnerships across businesses and universities.</p></article>
+              <article className="context-row"><span>INSTITUTIONAL REPRESENTATION</span><h3>Student Ambassador, URAO</h3><p>Selected from 300+ applicants to represent HKUST at high-profile recruitment events; a stakeholder-facing complement to the markets and product narrative.</p></article>
+              <article className="context-row"><span>ACADEMIC BASE</span><h3>HKUST RMBI + Mathematics Minor</h3><p>GPA 3.871; Dean&apos;s List, Beyond Academic Admissions Scholarship, and HKGCC Scholarship for Innovation and Creativity. Relevant work spans financial services, risk, factor models, blockchain programming, and venture-building.</p></article>
+              <article className="context-row"><span>EARLY DISTINCTION</span><h3>Quantitative and engineering foundations</h3><p>BPhO Gold, FISO International Round Gold, Mathematics &amp; AI Excellence Award, and University of Toronto DEEP coursework in computer vision, data analytics, and applied engineering science.</p></article>
+            </div>
+          </div>
         </section>
 
         <section id="skills" className="section skills-section section-anchor" data-section>
