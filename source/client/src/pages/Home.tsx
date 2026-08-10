@@ -254,6 +254,11 @@ export default function Home() {
           ))}
         </nav>
 
+        <nav className="profile-switch" aria-label="Portfolio profile">
+          <a className="is-active" href="/" aria-current="page">Markets</a>
+          <a href="/ai/">AI Engineering</a>
+        </nav>
+
         <div className="header-actions">
           <button
             className="icon-button theme-button"
@@ -480,9 +485,11 @@ export default function Home() {
                 </div>
                 <div className="project-footer">
                   <span>Python · Solidity · Polygon · React</span>
-                  <a href="https://github.com/YongWilliam-ai/polyalpha-protocol" target="_blank" rel="noreferrer">
-                    View repository <ArrowUpRight size={16} />
-                  </a>
+                  <div className="project-actions">
+                    <a href="https://polyalpha-dashboard.vercel.app/" target="_blank" rel="noreferrer"><Globe2 size={15} /> Testnet</a>
+                    <a href="https://github.com/YongWilliam-ai/polyalpha-protocol" target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
+                    <a href="/decks/polyalpha-protocol-pitch.pdf" target="_blank" rel="noreferrer"><FileText size={15} /> Deck</a>
+                  </div>
                 </div>
               </div>
             </article>
@@ -530,13 +537,9 @@ export default function Home() {
                 </p>
                 <div className="project-footer">
                   <span>Solidity · Polygon · IPFS · React</span>
-                  <div className="project-links">
-                    <a href="https://github.com/YongWilliam-ai/stubase2026" target="_blank" rel="noreferrer" aria-label="Open StuBase repository">
-                      <Github size={16} />
-                    </a>
-                    <a href="https://stubase.xyz/" target="_blank" rel="noreferrer" aria-label="Open StuBase website">
-                      <Globe2 size={16} />
-                    </a>
+                  <div className="project-actions">
+                    <a href="https://stubase.xyz/" target="_blank" rel="noreferrer"><Globe2 size={15} /> Product</a>
+                    <a href="https://github.com/YongWilliam-ai/stubase2026" target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
                   </div>
                 </div>
               </div>
@@ -557,7 +560,11 @@ export default function Home() {
                 </p>
                 <div className="project-footer">
                   <span>HKUST Dream Builder Cohort #2</span>
-                  <span className="muted-detail">HK$10,000 approved support</span>
+                  <div className="project-actions">
+                    <a href="https://code.rxlab.app/" target="_blank" rel="noreferrer"><Globe2 size={15} /> Product</a>
+                    <a href="https://github.com/rxtech-lab/rxcode" target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
+                    <a href="/decks/rxcode-dream-builder-pitch.pdf" target="_blank" rel="noreferrer"><FileText size={15} /> Deck</a>
+                  </div>
                 </div>
               </div>
             </article>
@@ -665,7 +672,7 @@ export default function Home() {
           <img src={getAsset("mark")} alt="" />
           <span>William Yong / Signal Path</span>
         </div>
-        <p>Built as a static, accessible portfolio. © {new Date().getFullYear()} Yong William.</p>
+        <p>Built as a static, accessible Markets portfolio. © {new Date().getFullYear()} William Yong.</p>
         <div className="footer-links">
           <a href="https://github.com/YongWilliam-ai" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/william-yong-profile" target="_blank" rel="noreferrer">LinkedIn</a>

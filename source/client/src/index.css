@@ -117,6 +117,12 @@ img { display: block; max-width: 100%; }
 .desktop-nav a:hover, .desktop-nav a.is-active { color: var(--text); }
 .desktop-nav a:hover::after, .desktop-nav a.is-active::after { transform: scaleX(1); }
 
+.profile-switch { display: inline-flex; align-items: center; gap: 0.18rem; padding: 0.2rem; border: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+.profile-switch a { padding: 0.34rem 0.52rem; color: var(--text-muted); font-family: "IBM Plex Mono", monospace; font-size: 0.52rem; letter-spacing: 0.055em; text-transform: uppercase; transition: color 160ms ease, background 160ms ease; }
+.profile-switch a:hover { color: var(--text); }
+.profile-switch a.is-active { color: #fff; background: var(--violet); }
+html[data-theme="light"] .profile-switch a.is-active { color: #fff; }
+
 .header-actions { display: flex; align-items: center; gap: 0.7rem; }
 .icon-button { display: grid; width: 35px; height: 35px; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--text-soft); background: transparent; cursor: pointer; transition: 170ms cubic-bezier(0.23, 1, 0.32, 1); }
 .icon-button:hover { border-color: var(--violet); color: var(--violet-light); transform: translateY(-1px); }
@@ -243,6 +249,10 @@ html[data-theme="light"] .instrument-overlay { background: linear-gradient(115de
 .project-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto; padding-top: 1.45rem; border-top: 1px solid var(--line); color: var(--text-muted); font-family: "IBM Plex Mono", monospace; font-size: 0.57rem; letter-spacing: 0.03em; }
 .project-footer > a { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text); font-family: "Space Grotesk", sans-serif; font-size: 0.75rem; font-weight: 600; transition: color 150ms ease, transform 150ms ease; }
 .project-footer > a:hover { color: var(--violet-light); transform: translateX(2px); }
+.project-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 0.5rem; }
+.project-actions a { display: inline-flex; align-items: center; gap: 0.28rem; color: var(--text-soft); font-family: "Space Grotesk", sans-serif; font-size: 0.68rem; font-weight: 600; transition: color 150ms ease, transform 150ms ease; }
+.project-actions a:hover { color: var(--violet-light); transform: translateX(2px); }
+.project-actions svg { color: var(--violet-light); }
 .project-card-quant { min-height: 570px; }
 .project-card-quant .project-image-wrap { height: 245px; min-height: 245px; }
 .compact-metrics { display: flex; flex-wrap: wrap; gap: 0.48rem; margin: 1.45rem 0; }
@@ -258,6 +268,32 @@ html[data-theme="light"] .instrument-overlay { background: linear-gradient(115de
 .muted-detail { color: var(--text-muted); }
 .project-disclosure { display: flex; align-items: flex-start; gap: 0.45rem; max-width: 690px; margin: 1.2rem 0 0 auto; color: var(--text-muted); font-family: "IBM Plex Mono", monospace; font-size: 0.59rem; line-height: 1.6; }
 .project-disclosure svg { flex: none; margin-top: 0.1rem; color: var(--violet-light); }
+
+.ai-profile .ambient-orb-one { top: 14rem; background: radial-gradient(circle, rgba(115,68,230,0.2), transparent 64%); }
+.ai-profile .ambient-orb-two { top: 76rem; background: radial-gradient(circle, rgba(198,255,74,0.1), transparent 66%); }
+.ai-profile .hero-discipline { color: var(--green); }
+.ai-profile .hero h1 strong { color: var(--violet-light); }
+.ai-hero-instrument { border-color: rgba(139,92,246,0.36); }
+.ai-principle { grid-template-columns: 0.3fr 1fr; align-items: center; min-height: 180px; }
+.ai-principle .project-icon { align-self: center; justify-self: center; margin: 0; }
+.ai-principle > div:last-child { padding-left: 0; }
+.ai-projects-grid .project-card { min-height: 380px; }
+.ai-featured-card { min-height: 410px; }
+.ai-project-side { position: relative; display: grid; place-content: center; gap: 1rem; min-height: 100%; overflow: hidden; padding: 2rem; border-right: 1px solid var(--line); color: var(--violet-light); background: radial-gradient(circle at 50% 20%, var(--violet-wash), transparent 45%), linear-gradient(160deg, var(--surface-raised), var(--bg-deep)); }
+.ai-project-side::before, .ai-project-side::after { position: absolute; content: ""; pointer-events: none; }
+.ai-project-side::before { top: 12%; right: 12%; bottom: 12%; left: 12%; border: 1px solid var(--line); }
+.ai-project-side::after { right: 0; bottom: 18%; left: 0; height: 1px; background: linear-gradient(to right, transparent, var(--green), transparent); }
+.ai-project-side svg, .ai-project-side span, .ai-project-side i { position: relative; z-index: 1; }
+.ai-project-side span { color: var(--text-muted); font-family: "IBM Plex Mono", monospace; font-size: 0.57rem; letter-spacing: 0.12em; text-align: center; }
+.ai-project-side i { width: 54px; height: 1px; margin: 0 auto; background: var(--green); }
+.project-card-ai { background: radial-gradient(circle at 90% 4%, rgba(139,92,246,0.12), transparent 35%), linear-gradient(135deg, var(--surface), rgba(255,255,255,0.01)); }
+.ai-stubase-card { background: radial-gradient(circle at 8% 0%, rgba(198,255,74,0.1), transparent 34%), linear-gradient(135deg, var(--surface), rgba(255,255,255,0.01)); }
+.ai-contact-panel { align-self: start; display: grid; gap: 0.55rem; padding: clamp(1.45rem, 3vw, 2.3rem); border: 1px solid var(--line-strong); background: radial-gradient(circle at 85% 0%, var(--violet-wash), transparent 42%), linear-gradient(135deg, var(--surface), rgba(255,255,255,0.02)); box-shadow: var(--shadow); }
+.ai-contact-panel > span { color: var(--green); font-family: "IBM Plex Mono", monospace; font-size: 0.57rem; letter-spacing: 0.11em; }
+.ai-contact-panel strong { color: var(--text); font-family: "Space Grotesk", sans-serif; font-size: 1.55rem; font-weight: 500; letter-spacing: -0.045em; line-height: 1.05; }
+.ai-contact-panel p { margin: 0.6rem 0 0; color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; }
+.ai-contact-panel a { display: inline-flex; align-items: center; gap: 0.4rem; width: fit-content; margin-top: 1rem; color: var(--text); font-family: "Space Grotesk", sans-serif; font-size: 0.8rem; font-weight: 600; }
+.ai-contact-panel a:hover { color: var(--violet-light); }
 
 .skills-section { padding-top: 8rem; }
 .skills-layout { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: clamp(3rem, 8vw, 10rem); }
@@ -312,6 +348,7 @@ html[data-theme="light"] .instrument-overlay { background: linear-gradient(115de
 @media (max-width: 980px) {
   .site-header { padding: 0 4vw; }
   .desktop-nav, .header-contact { display: none; }
+  .profile-switch { margin-left: auto; }
   .mobile-menu-button { display: grid; }
   .mobile-nav { position: absolute; top: calc(100% + 1px); right: 0; left: 0; display: grid; max-height: 0; overflow: hidden; border-bottom: 1px solid transparent; background: var(--bg-deep); opacity: 0; transition: max-height 280ms cubic-bezier(0.23, 1, 0.32, 1), opacity 180ms ease, border-color 180ms ease; }
   .mobile-nav.is-open { max-height: 380px; border-color: var(--line); opacity: 1; }
@@ -331,10 +368,13 @@ html[data-theme="light"] .instrument-overlay { background: linear-gradient(115de
   .project-card-featured { grid-template-columns: 1fr; }
   .project-card-featured .project-image-wrap { min-height: 250px; }
   .project-card-featured .project-image-wrap::after { background: linear-gradient(to top, var(--surface-solid), transparent 52%); }
+  .ai-project-side { min-height: 215px; border-right: 0; border-bottom: 1px solid var(--line); }
 }
 
 @media (max-width: 660px) {
   .brand-copy small { display: none; }
+  .profile-switch { gap: 0.08rem; margin-left: auto; padding: 0.14rem; }
+  .profile-switch a { padding: 0.3rem 0.35rem; font-size: 0.47rem; }
   .site-header { min-height: 64px; }
   .brand-sigil { width: 39px; height: 39px; }
   .brand-mark { width: 33px; height: 33px; }
@@ -371,6 +411,9 @@ html[data-theme="light"] .instrument-overlay { background: linear-gradient(115de
   .project-metrics div:nth-child(2) { border-right: 0; }
   .project-metrics div:nth-child(3) { grid-column: 1 / -1; padding-top: 0.45rem; border-top: 1px solid var(--line); }
   .project-footer { align-items: flex-start; flex-direction: column; }
+  .project-actions { justify-content: flex-start; }
+  .ai-principle { grid-template-columns: 0.28fr 1fr; }
+  .ai-principle .project-icon { width: 40px; height: 40px; }
   .skill-group { grid-template-columns: 1fr; gap: 0.8rem; }
   .contact-section { padding-bottom: 5rem; }
   .site-footer { align-items: flex-start; flex-direction: column; gap: 1rem; }
