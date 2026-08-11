@@ -57,15 +57,6 @@ const githubAssets: Record<AssetKey, string> = {
 
 const experience = [
   {
-    period: "Incoming",
-    company: "BIT",
-    role: "U.S. Equities Operations Intern",
-    status: "Incoming",
-    description:
-      "Selected to support U.S. equities operations, product-content development, and data-driven process improvement across market research, user education, and cross-functional execution.",
-    evidence: "Mandate logged / incoming scope only",
-  },
-  {
     period: "Jun–Aug 2026",
     company: "KNQ Technology",
     role: "Sport AI Agent Intern",
@@ -437,7 +428,7 @@ export default function Home() {
                 <summary>
                   <span className="experience-marker" aria-hidden="true"><span>{String(index + 1).padStart(2, "0")}</span></span>
                   <span className="experience-meta"><p>{item.period}</p><span>{item.status}</span></span>
-                  <span className="experience-summary"><span className="company-name">{item.company}</span><strong>{item.role}</strong><em>{item.evidence}</em></span>
+                  <span className="experience-summary"><span className="company-name">{item.company}</span><strong>{item.role}</strong><em>{item.evidence}</em><span className="experience-open-label">Open full scope</span></span>
                   <ChevronDown className="experience-chevron" size={17} aria-hidden="true" />
                 </summary>
                 <div className="experience-detail"><p>{item.description}</p><span className="experience-evidence"><Activity size={12} /> Evidence record: {item.evidence}</span></div>

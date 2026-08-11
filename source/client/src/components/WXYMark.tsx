@@ -2,6 +2,8 @@
  * WXY Coordinate Mark — abstract X-shaped coordinate crossing with interwoven W/Y paths.
  * Shared brand element for Markets and AI Operations profile routes.
  */
+import React from "react";
+
 type WXYMarkProps = {
   variant?: "markets" | "ai";
   label?: string;
