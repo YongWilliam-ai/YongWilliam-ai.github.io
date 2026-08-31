@@ -49,10 +49,10 @@ const assetFiles: Record<AssetKey, string> = {
 };
 
 const githubAssets: Record<AssetKey, string> = {
-  hero: "william-hero-signal-field.webp",
-  polyalpha: "polyalpha-vault-visual.webp",
-  quant: "quant-research-visual.webp",
-  fencing: "fencing-signal-visual.webp",
+  hero: "william-hero-signal-field.png",
+  polyalpha: "polyalpha-vault-visual.png",
+  quant: "quant-research-visual.png",
+  fencing: "fencing-signal-visual.png",
 };
 
 const experience = [
@@ -60,10 +60,10 @@ const experience = [
     period: "Jun–Aug 2026",
     company: "KNQ Technology",
     role: "Sport AI Agent Intern",
-    status: "Applied AI",
+    status: "Applied AI systems",
     description:
-      "Built evidence-aware Python matching logic, offline review outputs, and regression tests for sports-content systems—focusing on conservative fallbacks when data cannot support a claim.",
-    evidence: "63 offline events / 10 regression tests",
+      "Engineered modular Python evidence pipelines for a sports-commentary quality workflow, aligning ball-trajectory data with official match-event logs; classified 63 events into 40 high-confidence commentary triggers and 23 rule-based safe fallbacks, with 10/10 unit and regression tests passed.",
+    evidence: "63 events · 40 triggers · 23 fallbacks · 10/10 tests",
   },
   {
     period: "Mar 2026–Present",
@@ -71,17 +71,17 @@ const experience = [
     role: "Global Campus Ambassador, HKUST",
     status: "Markets education",
     description:
-      "First and only undergraduate Futu Global Campus Ambassador at HKUST, supporting investor education and campus engagement for an SFC-regulated securities firm.",
-    evidence: "Campus investor-education route",
+      "Appointed as the first undergraduate Futu Global Campus Ambassador at HKUST, supporting campus community engagement, investor-education sessions, and responsible financial-literacy activities for an SFC-regulated digital brokerage platform.",
+    evidence: "Investor education · regulated-finance context",
   },
   {
     period: "Dec 2025–Jan 2026",
     company: "United Technologies (Int'l) Ltd.",
-    role: "AI Business Transformation Engineer Trainee",
-    status: "Operations AI",
+    role: "AI Business Digital Transformation Engineer Trainee",
+    status: "AI-enabled operations",
     description:
-      "Deployed AI-enabled workflow automation for 15+ SMEs, reducing manual processing time by 40% while translating operational constraints into implementable process improvements.",
-    evidence: "15+ SME implementations / 40% manual-time reduction",
+      "Supported AI-enabled accounting-workflow adoption for 15+ SMEs, resolved 50+ operational or integration issues, and built Excel VBA CRM automations for 20+ accounts; team delivery reported 40% less manual work, 30% lower downtime, 95% client satisfaction, 10+ hours saved weekly and approximately 25% operational savings.",
+    evidence: "15+ SME workflows · 50+ issues · 20+ accounts",
   },
   {
     period: "Jun–Aug 2025",
@@ -89,17 +89,17 @@ const experience = [
     role: "Data Analyst Intern",
     status: "Data systems",
     description:
-      "Built Python and SQL pipelines across 100k+ transactions; forecasting work reduced inventory turnover time by 15% and automation delivered measurable operational savings.",
-    evidence: "100k+ transactions / 15% turnover-time reduction",
+      "Built Python (pandas/NumPy) and SQL pipelines across 100,000+ transaction records; developed forecasts, dashboards, and CRM/customer-service automations to support management reporting and inventory decisions.",
+    evidence: "100k+ records · 15% faster turnover · ~25% savings",
   },
   {
-    period: "Summer 2024",
+    period: "Jun–Aug 2024",
     company: "CTM — Companhia de Telecomunicações de Macau",
-    role: "Summer Trainee, Youth Development Program",
-    status: "Commercial operations",
+    role: "Summer Intern — 4-Department Rotation Programme",
+    status: "Cross-functional operations",
     description:
-      "Supported a charity livestream campaign for a disability-support enterprise, converted 10+ telecom contracts in one week, and gained exposure to B2C/B2B commercial cycles, fibre and 5G operations, and compliance context.",
-    evidence: "10+ contract conversions / telecom operations exposure",
+      "Completed a structured rotation across Big Data Analytics, Fibre Network Operations, Social Media & Live Stream, and CRM Customer Service, supporting operational reporting, internal documentation, system updates, and customer communication.",
+    evidence: "Data, network, media & CRM operations exposure",
   },
 ];
 
@@ -110,20 +110,20 @@ const skills = [
     items: [
       "Factor research & validation",
       "Walk-forward backtesting",
-      "ARIMA / GARCH modelling",
-      "Portfolio optimisation",
+      "Portfolio construction",
       "Market & risk analysis",
+      "Sharpe, drawdown & scenario thinking",
     ],
   },
   {
     icon: Code2,
-    label: "Technical Systems",
+    label: "Data & Technical Systems",
     items: [
       "Python · pandas · NumPy",
       "SQL & data pipelines",
-      "React & product prototyping",
-      "Solidity & smart contracts",
-      "AI workflow automation",
+      "Excel/VBA automation",
+      "Unit & regression testing",
+      "React · Solidity · Git/GitHub",
     ],
   },
   {
@@ -131,10 +131,10 @@ const skills = [
     label: "Product & Execution",
     items: [
       "Investor education",
-      "AI product quality",
+      "AI quality & localisation",
       "Research communication",
       "Customer discovery",
-      "Team leadership & fencing",
+      "Team leadership",
     ],
   },
 ];
@@ -146,6 +146,15 @@ function getAsset(key: AssetKey) {
   return `/manus-storage/${assetFiles[key]}`;
 }
 
+function AlphaChallengeCard() {
+  return (
+    <article className="project-card project-card-quant" data-reveal>
+      <div className="project-image-wrap"><img src={getAsset("quant")} alt="Abstract factor model research landscape" /><div className="image-scanlines" aria-hidden="true" /></div>
+      <div className="project-card-content"><div className="project-topline"><span>01 / Factor research</span><span className="status-badge status-green">WALK-FORWARD · ACADEMIC RESEARCH</span></div><h3>RMBI 3110 Alpha Challenge</h3><p>Built a walk-forward long-only equity research model in Python using six composite factors and a Histogram Gradient Boosting Regressor. The project prioritised periodic retraining, a SPY regime filter, out-of-sample validation and clear documentation of limits.</p><div className="compact-metrics"><span><strong>1.33</strong> OOS Sharpe</span><span><strong>0.66</strong> SPY baseline</span><span><strong>19 years</strong> OOS data</span><span><strong>22.7%</strong> annualized return</span><span><strong>-23.1%</strong> maximum drawdown</span></div><p className="project-boundary">Academic out-of-sample research/backtest; not live investment performance, investment advice, or a managed strategy.</p><div className="project-footer"><span>Python · pandas · NumPy · scikit-learn · Jupyter</span><div className="project-actions"><a href="https://files.manuscdn.com/user_upload_by_module/session_file/310419663030260308/neehOIWFcJZJXzDM.html" target="_blank" rel="noreferrer"><Globe2 size={15} /> Research evidence</a><a href="/case/rmbi-alpha/"><ArrowUpRight size={15} /> Case study</a></div></div></div>
+    </article>
+  );
+}
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
   const [isLight, setIsLight] = useState(false);
@@ -153,7 +162,7 @@ export default function Home() {
   const [typedLine, setTypedLine] = useState("");
   const [formNotice, setFormNotice] = useState("");
 
-  const typeLine = "Research-backed systems for markets, product, and emerging technology.";
+  const typeLine = "Quantitative validation, AI/data systems, and market context in reviewable work.";
 
   useEffect(() => {
     document.documentElement.dataset.theme = isLight ? "light" : "dark";
@@ -305,39 +314,42 @@ export default function Home() {
             <div className="hero-copy" data-reveal>
               <div className="eyebrow">
                 <span className="pulse-dot" />
-                Hong Kong · Global perspective
+                Hong Kong · Markets, research &amp; product systems
               </div>
-              <p className="hero-discipline">MARKETS RESEARCH &amp; OPERATIONS · FINTECH · INVESTOR EDUCATION</p>
-              <p className="profile-lens">PROFILE 01 / SELL-SIDE MARKETS · RESEARCH → OPERATIONS → CLIENT CONTEXT</p>
+              <p className="hero-discipline">MARKETS RESEARCH · QUANTITATIVE VALIDATION · AI-ENABLED OPERATIONS</p>
+              <p className="profile-lens">PROFILE 01 / MARKETS · QUANT RESEARCH · AI PRODUCT SYSTEMS</p>
               <h1>
                 <span>William Yong</span>
-                <strong>Turning signals into systems.</strong>
+                <strong>Market signals, tested systems, clearer decisions.</strong>
               </h1>
               <p className="typed-line" aria-label={typeLine}>
                 {typedLine}
                 <span className="typing-cursor" aria-hidden="true" />
               </p>
               <p className="hero-intro">
-                HKUST RMBI student and markets-oriented builder with work spanning factor research,
-                AI-enabled operations, investor education, and Web3 product systems.
+                HKUST RMBI student working across quantitative research, AI/data systems, and investor-facing
+                product communication.
               </p>
               <div className="hero-actions">
                 <button className="button button-primary" type="button" onClick={() => scrollTo("projects")}>
                   Trace selected work <ArrowDown size={16} />
                 </button>
+                <a className="button button-secondary" href="https://www.linkedin.com/in/william-yong-profile" target="_blank" rel="noreferrer">
+                  View LinkedIn <ArrowUpRight size={16} />
+                </a>
               </div>
               <dl className="hero-credentials">
                 <div>
                   <dt>Academic base</dt>
-                  <dd>HKUST RMBI + Math Minor</dd>
+                  <dd>HKUST BSc in RMBI · Mathematics Minor</dd>
                 </div>
                 <div>
                   <dt>Current direction</dt>
-                  <dd>Sell-Side Markets 2027</dd>
+                  <dd>2027 Markets, Quant Research &amp; AI Product Opportunities</dd>
                 </div>
                 <div>
-                  <dt>Operating mode</dt>
-                  <dd>Evidence first</dd>
+                  <dt>Method</dt>
+                  <dd>Research → Build → Review</dd>
                 </div>
               </dl>
             </div>
@@ -374,20 +386,24 @@ export default function Home() {
           </div>
           <div className="about-layout">
             <div className="section-heading" data-reveal>
-              <p className="overline">A disciplined builder with a market lens</p>
-              <h2>Analysis is only useful when it can move through a real system.</h2>
+              <p className="overline">Market context, research discipline, systems thinking</p>
+              <h2>Analysis matters when it can be reviewed, communicated and used.</h2>
             </div>
             <div className="about-copy" data-reveal>
               <p>
-                I am a Hong Kong-based HKUST student studying Risk Management &amp; Business
-                Intelligence with a Mathematics minor. My work sits where quantitative research,
-                product judgment, and operational reality meet.
+                I am a Hong Kong–based HKUST student studying Risk Management &amp; Business Intelligence,
+                with a Mathematics minor. My work sits where market context, quantitative validation,
+                and AI-enabled systems meet.
               </p>
               <p>
-                Across factor-model research, AI workflow automation, investor education, and Web3
-                prototypes, I am interested in the same question: <em>what signal is credible enough
-                to act on?</em> I am building toward a sell-side Markets pathway while keeping the
-                practical builder&apos;s habit of shipping, testing, and documenting assumptions.
+                Across quantitative research, AI workflow development and product execution, I focus on
+                the same discipline: make the source, assumptions, controls and limitations clear enough
+                for another person to review the work.
+              </p>
+              <p>
+                That principle informs research backtests, evidence-matching pipelines and testnet product
+                prototypes alike. The work is positioned as research, systems and product operations—not
+                trading, investment advice or live investment management.
               </p>
               <div className="about-links">
                 <a href="https://www.linkedin.com/in/william-yong-profile" target="_blank" rel="noreferrer">
@@ -404,8 +420,8 @@ export default function Home() {
                 <span className="note-index">PERFORMANCE PRINCIPLE</span>
                 <h3>10+ years of competitive épée.</h3>
                 <p>
-                  As HKUST Fencing Team President, I bring preparation, pacing, and decision-making
-                  under pressure into research and product work.
+                  As President of the HKUST Fencing Team, I bring preparation, feedback loops and
+                  decision-making under pressure to research and product work.
                 </p>
               </div>
             </aside>
@@ -454,6 +470,7 @@ export default function Home() {
           </div>
 
           <div className="projects-grid">
+            <AlphaChallengeCard />
             <article className="project-card project-card-featured" data-reveal>
               <div className="project-image-wrap">
                 <img src={getAsset("polyalpha")} alt="Abstract market vault visual for PolyAlpha Protocol" />
@@ -461,20 +478,22 @@ export default function Home() {
               </div>
               <div className="project-card-content">
                 <div className="project-topline">
-                  <span>01 / Market microstructure &amp; DeFi</span>
-                  <span className="status-badge status-violet">Backtested / Testnet</span>
+                  <span>02 / Prediction-market research &amp; DeFi systems</span>
+                  <span className="status-badge status-violet">BACKTESTED / TESTNET</span>
                 </div>
                 <h3>PolyAlpha Protocol</h3>
                 <p>
-                  Designed a DAO-governed, AI-driven prediction-market vault on Polygon. The research
-                  prototype combines historical trade analysis, validation assumptions, and a
-                  testnet-oriented product architecture—not a live investment product.
+                  Built a testnet and backtested DeFi research prototype combining an ERC-4626 vault,
+                  Solidity smart contracts, a React dashboard, AI-agent orchestration and on-chain
+                  oracle-input logging. It explores prediction-market pricing bias through a transparent
+                  research and product-design lens.
                 </p>
                 <div className="project-metrics" aria-label="Reported backtest metrics">
-                  <div><strong>400M+</strong><span>historical trades</span></div>
+                  <div><strong>400M+</strong><span>historical observations</span></div>
                   <div><strong>62.9%</strong><span>reported win rate</span></div>
                   <div><strong>2.53</strong><span>reported Sharpe ratio</span></div>
                 </div>
+                <p className="project-boundary">Historical/backtested research and testnet prototype only; not a live fund, managed-investment product, live market maker, or realised P&amp;L claim.</p>
                 <div className="project-footer">
                   <span>Python · Solidity · Polygon · React</span>
                   <div className="project-actions">
@@ -487,46 +506,18 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="project-card project-card-quant" data-reveal>
-              <div className="project-image-wrap">
-                <img src={getAsset("quant")} alt="Abstract factor model research landscape" />
-                <div className="image-scanlines" aria-hidden="true" />
-              </div>
-              <div className="project-card-content">
-                <div className="project-topline">
-                  <span>02 / Factor research</span>
-                  <span className="status-badge status-green">Walk-forward</span>
-                </div>
-                <h3>RMBI Alpha Challenge</h3>
-                <p>
-                  Engineered six composite factors and a walk-forward HistGradientBoostingRegressor
-                  research model, with an emphasis on interpretability, regime risk, and out-of-sample
-                  evaluation rather than headline performance alone.
-                </p>
-                <div className="compact-metrics">
-                  <span><strong>1.20</strong> OOS Sharpe</span>
-                  <span><strong>0.66</strong> SPY baseline</span>
-                  <span><strong>19 years</strong> OOS data</span>
-                </div>
-                <div className="project-footer">
-                  <span>Python · pandas · scikit-learn</span>
-                  <div className="project-actions"><span className="muted-detail">Research build</span><a href="/case/rmbi-alpha/"><ArrowUpRight size={15} /> Case study</a></div>
-                </div>
-              </div>
-            </article>
-
             <article className="project-card project-card-stubase" data-reveal>
               <div className="project-card-content">
                 <div className="project-topline">
-                  <span>03 / Anti-fraud infrastructure</span>
-                  <span className="status-badge status-outline">MVP</span>
+                  <span>04 / Anti-fraud infrastructure</span>
+                  <span className="status-badge status-outline">MVP / RESEARCH PROTOTYPE</span>
                 </div>
                 <div className="project-icon"><Blocks size={23} /></div>
                 <h3>StuBase</h3>
                 <p>
-                  A Web3 anti-fraud intelligence prototype for Hong Kong students, joining AI-assisted
-                  message screening with on-chain registries, tokenised governance, and transparent
-                  evidence handling.
+                  Founded a Web3 anti-fraud and compliance prototype for Hong Kong students, joining
+                  AI-assisted message screening with identity integrity, KYC/AML-oriented logic, Polygon L2,
+                  Solidity, IPFS, zero-knowledge identity concepts and DAO governance.
                 </p>
                 <div className="project-footer">
                   <span>Solidity · Polygon · IPFS · React</span>
@@ -542,16 +533,19 @@ export default function Home() {
             <article className="project-card project-card-rxcode" data-reveal>
               <div className="project-card-content">
                 <div className="project-topline">
-                  <span>04 / AI product &amp; growth</span>
-                  <span className="status-badge status-outline">Active</span>
+                  <span>03 / AI product &amp; growth</span>
+                  <span className="status-badge status-outline">ACTIVE · HKUST DREAM BUILDER 2025/26</span>
                 </div>
                 <div className="project-icon"><Trophy size={22} /></div>
                 <h3>RxCode</h3>
                 <p>
-                  Co-founded an AI-assisted development control layer designed to preserve human
-                  approval and Git continuity while teams monitor coding-agent work. Leading launch,
-                  customer discovery, and commercialisation planning.
+                  Co-founded an AI-assisted development control layer that lets teams run, review and
+                  monitor coding-agent tasks while preserving human approval, Git continuity and mobile
+                  visibility. William leads HKUST go-to-market, customer discovery, product positioning and
+                  commercialisation planning.
                 </p>
+                <div className="compact-metrics"><span><strong>Dream Builder</strong> Cohort #2</span><span><strong>HK$10,000</strong> approved startup support</span><span><strong>12 months</strong> validation roadmap</span></div>
+                <p className="project-boundary">Role scope is AI product and growth—not lead engineering or system-architecture ownership.</p>
                 <div className="project-footer">
                   <span>HKUST Dream Builder Cohort #2</span>
                   <div className="project-actions">
@@ -580,11 +574,10 @@ export default function Home() {
               <a className="share-link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fyongwilliam-ai.github.io%2F" target="_blank" rel="noreferrer">Share Markets profile on LinkedIn <Linkedin size={15} /></a>
             </div>
             <div className="context-ledger" data-reveal>
-              <article className="context-row"><span>LEADERSHIP</span><h3>President, HKUST Fencing Team &amp; Club</h3><p>Jan 2025–Jan 2028 · 10+ years of competitive épée; led campus classes and initiatives, earned the HKUST Men&apos;s Fencing Team Outstanding Contribution Award, and brings national-team and Level 3 trainee-referee discipline to decision-making under pressure.</p></article>
+              <article className="context-row"><span>LEADERSHIP</span><h3>President, HKUST Fencing Team</h3><p>2025–Present · Leads 30+ members; has managed a HKD 50,000 budget and 5+ events for 300+ participants. The work links preparation, feedback and decision-making under pressure.</p></article>
               <article className="context-row"><span>COMMUNITY OPERATIONS</span><h3>External Vice President, Federation of Macau Students in Hong Kong</h3><p>Nov 2024–Nov 2025 · Managed a HK$50,000+ budget, organised five events for 300+ participants, and established 10+ partnerships across businesses and universities.</p></article>
-              <article className="context-row"><span>INSTITUTIONAL REPRESENTATION</span><h3>Student Ambassador, URAO</h3><p>Selected from 300+ applicants to represent HKUST at high-profile recruitment events; a stakeholder-facing complement to the markets and product narrative.</p></article>
-              <article className="context-row"><span>ACADEMIC BASE</span><h3>HKUST RMBI + Mathematics Minor</h3><p>GPA 3.871; 2024 Fall Dean&apos;s List, Beyond Academic Admissions Scholarship, and HKGCC Scholarship for Innovation and Creativity. Relevant work spans financial services, risk, factor models, blockchain programming, and venture-building.</p></article>
-              <article className="context-row"><span>EARLY DISTINCTION</span><h3>Quantitative and engineering foundations</h3><p>BPhO Gold, FISO International Round Gold, Mathematics &amp; AI Excellence Award, and University of Toronto DEEP coursework in computer vision, data analytics, and applied engineering science.</p></article>
+              <article className="context-row"><span>ACADEMIC BASE</span><h3>HKUST BSc in Risk Management &amp; Business Intelligence · Mathematics Minor</h3><p>Expected Jun 2028 · GPA 3.871/4.30 · Dean&apos;s List, Fall 2024 · Beyond Academic Admissions Scholarship · HKGCC Scholarship for Innovation &amp; Creativity.</p></article>
+              <article className="context-row"><span>EARLY DISTINCTION</span><h3>Quantitative and engineering foundations</h3><p>BPhO Gold Award · iGEM 2023 Global Gold · Bloomberg Global Trading Challenge (2025) · selected international innovation awards.</p></article>
             </div>
           </div>
         </section>
@@ -597,11 +590,11 @@ export default function Home() {
           </div>
           <div className="skills-layout">
             <div className="section-heading" data-reveal>
-              <p className="overline">One builder, three connected toolkits</p>
-              <h2>Technical depth is more useful when it connects to a desk, a user, or a decision.</h2>
+              <p className="overline">One profile, three connected toolkits</p>
+              <h2>Technical depth matters when it connects to a market, a user, or a decision.</h2>
               <div className="skills-ledger">
                 <span>METHOD</span><strong>Research → Build → Review</strong>
-                <span>OUTPUT</span><strong>Decision-ready systems</strong>
+                <span>OUTPUT</span><strong>Decision-ready analysis and auditable systems</strong>
               </div>
             </div>
             <div className="skill-groups">
@@ -628,20 +621,20 @@ export default function Home() {
           </div>
           <div className="contact-layout">
             <div className="contact-copy" data-reveal>
-              <p className="overline">Open to substantive conversations</p>
-              <h2>If the work is useful, let&apos;s get specific.</h2>
+              <p className="overline">Open to relevant work and thoughtful collaboration</p>
+              <h2>Let&apos;s make the next decision clearer.</h2>
               <p>
-                I welcome conversations on Markets internships, quantitative research, product systems,
-                AI-enabled operations, and early-stage collaboration.
+                I welcome conversations on 2027 Markets internships, quantitative research, market risk,
+                electronic-trading-adjacent analytics, AI-enabled operations and early-stage product work.
               </p>
               <div className="contact-direct-links">
                 <a href="mailto:yongwilliam15@gmail.com"><Mail size={17} /> yongwilliam15@gmail.com</a>
                 <a href="https://www.linkedin.com/in/william-yong-profile" target="_blank" rel="noreferrer"><Linkedin size={17} /> linkedin.com/in/william-yong-profile</a>
                 <a href="https://github.com/YongWilliam-ai" target="_blank" rel="noreferrer"><Github size={17} /> github.com/YongWilliam-ai</a>
               </div>
-              <p className="location-line"><MapPin size={15} /> Hong Kong · HKUST · available for thoughtful collaboration</p>
+              <p className="location-line"><MapPin size={15} /> Hong Kong · HKUST · Expected graduation June 2028</p>
               <div className="contact-ledger">
-                <span>BEST ROUTE</span><strong>Specific opportunity or a problem worth solving</strong>
+                <span>BEST ROUTE</span><strong>Specific opportunity, problem, or collaboration idea</strong>
               </div>
             </div>
             <form
@@ -672,8 +665,7 @@ export default function Home() {
                 Send a considered note <Send size={16} />
               </button>
               <p className="form-note">
-                This form uses a no-backend delivery service. For the first use, the recipient may need
-                to confirm the delivery address.
+                Please share the opportunity, problem or collaboration idea. I will respond where there is a clear fit.
               </p>
               {formNotice && <p className="form-notice" role="status">{formNotice}</p>}
             </form>
@@ -683,7 +675,6 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="footer-brand"><WXYMark variant="markets" decorative /><span>William Yong / Markets Research</span></div>
-        <div className="global-context"><span className="global-context-label">CITIZENSHIP &amp; HOME REGIONS</span><p>Born in Australia · Raised in Macau · Studying in Hong Kong</p><div className="flag-row" aria-label="Canada, Australia, Portugal, Macao, and Hong Kong"><span title="Canada">🇨🇦</span><span title="Australia">🇦🇺</span><span title="Portugal">🇵🇹</span><span title="Macao">🇲🇴</span><span title="Hong Kong">🇭🇰</span></div></div>
         <div className="footer-links">
           <a href="https://github.com/YongWilliam-ai" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/william-yong-profile" target="_blank" rel="noreferrer">LinkedIn</a>
