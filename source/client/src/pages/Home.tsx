@@ -57,13 +57,13 @@ const githubAssets: Record<AssetKey, string> = {
 
 const experience = [
   {
-    period: "Aug–Sep 2026 · c. 8 weeks",
+    period: "Aug–Sep 2026",
     company: "BIT",
     role: "U.S. Equities Operations Intern",
     status: "U.S. equities operations",
     description:
       "Produced daily structured briefs across 3 market layers—U.S. equities, sectors and single stocks—integrating 4 signal families: macroeconomic indicators, Treasury yields, earnings releases and cross-asset signals. Tracked sector rotation, earnings catalysts and relative performance to translate recurring themes into investor-education materials, and consolidated market information, user feedback and product requirements into U.S. equities product-operations inputs. Scope was market information, investor education and product operations—not trade execution, investment advice or research-recommendation authority.",
-    evidence: "c. 8 weeks · daily briefs · 3 market layers · 4 signal families",
+    evidence: "Daily briefs · 3 market layers · 4 signal families",
   },
   {
     period: "Jun–Aug 2026",
@@ -336,7 +336,7 @@ export default function Home() {
                 <span className="typing-cursor" aria-hidden="true" />
               </p>
               <p className="hero-intro">
-                HKUST RMBI student working across U.S. equities operations, quantitative research, AI/data
+                HKUST RMBI student with recent U.S. equities operations experience, working across quantitative research, AI/data
                 systems, and investor-facing product communication.
               </p>
               <div className="hero-actions">
@@ -353,12 +353,12 @@ export default function Home() {
                   <dd>HKUST BSc in RMBI · Mathematics Minor</dd>
                 </div>
                 <div>
-                  <dt>Current role</dt>
-                  <dd>U.S. Equities Operations Intern, BIT</dd>
+                  <dt>Availability</dt>
+                  <dd>Open to Markets, Quant Research &amp; AI Product opportunities</dd>
                 </div>
                 <div>
-                  <dt>Current direction</dt>
-                  <dd>2027 Markets, Quant Research &amp; AI Product Opportunities</dd>
+                  <dt>Recent role</dt>
+                  <dd>U.S. Equities Operations Intern, BIT</dd>
                 </div>
                 <div>
                   <dt>Method</dt>
@@ -409,7 +409,7 @@ export default function Home() {
                 and AI-enabled systems meet.
               </p>
               <p>
-                During a c. 8-week U.S. Equities Operations internship at BIT, I produced daily briefs across
+                During a U.S. Equities Operations internship at BIT from August to September 2026, I produced daily briefs across
                 U.S. equity, sector and single-stock developments, integrating macro indicators, Treasury
                 yields, earnings releases and cross-asset signals. I translated recurring market themes,
                 market information, user feedback and product requirements into investor-education and
@@ -596,7 +596,7 @@ export default function Home() {
             <div className="context-ledger" data-reveal>
               <article className="context-row"><span>LEADERSHIP</span><h3>President, HKUST Fencing Team</h3><p>2025–Present · Leads 30+ members; has managed a HKD 50,000 budget and 5+ events for 300+ participants. The work links preparation, feedback and decision-making under pressure.</p></article>
               <article className="context-row"><span>COMMUNITY OPERATIONS</span><h3>External Vice President, Federation of Macau Students in Hong Kong</h3><p>Nov 2024–Nov 2025 · Managed a HK$50,000+ budget, organised five events for 300+ participants, and established 10+ partnerships across businesses and universities.</p></article>
-              <article className="context-row"><span>ACADEMIC BASE</span><h3>HKUST BSc in Risk Management &amp; Business Intelligence · Mathematics Minor</h3><p>Expected Jun 2028 · GPA 3.871/4.30 · Dean&apos;s List, Fall 2024 · Beyond Academic Admissions Scholarship · HKGCC Scholarship for Innovation &amp; Creativity.</p></article>
+              <article className="context-row"><span>ACADEMIC BASE</span><h3>HKUST BSc in Risk Management &amp; Business Intelligence · Mathematics Minor</h3><p>Expected Jun 2028 · Dean&apos;s List, Fall 2024 · Beyond Academic Admissions Scholarship · HKGCC Scholarship for Innovation &amp; Creativity.</p></article>
               <article className="context-row"><span>EARLY DISTINCTION</span><h3>Quantitative and engineering foundations</h3><p>BPhO Gold Award · iGEM 2023 Global Gold · Bloomberg Global Trading Challenge (2025) · selected international innovation awards.</p></article>
             </div>
           </div>
@@ -644,8 +644,8 @@ export default function Home() {
               <p className="overline">Open to relevant work and thoughtful collaboration</p>
               <h2>Let&apos;s make the next decision clearer.</h2>
               <p>
-                I welcome conversations on 2027 Markets internships, quantitative research, market risk,
-                electronic-trading-adjacent analytics, AI-enabled operations and early-stage product work.
+                I am currently open to Markets, Quantitative Research, Market Risk, electronic-trading-adjacent
+                analytics, AI-enabled operations and early-stage product opportunities.
               </p>
               <div className="contact-direct-links">
                 <a href="mailto:yongwilliam15@gmail.com"><Mail size={17} /> yongwilliam15@gmail.com</a>
