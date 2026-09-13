@@ -57,6 +57,15 @@ const githubAssets: Record<AssetKey, string> = {
 
 const experience = [
   {
+    period: "Aug–Sep 2026 · c. 8 weeks",
+    company: "BIT",
+    role: "U.S. Equities Operations Intern",
+    status: "U.S. equities operations",
+    description:
+      "Produced daily structured briefs across 3 market layers—U.S. equities, sectors and single stocks—integrating 4 signal families: macroeconomic indicators, Treasury yields, earnings releases and cross-asset signals. Tracked sector rotation, earnings catalysts and relative performance to translate recurring themes into investor-education materials, and consolidated market information, user feedback and product requirements into U.S. equities product-operations inputs. Scope was market information, investor education and product operations—not trade execution, investment advice or research-recommendation authority.",
+    evidence: "c. 8 weeks · daily briefs · 3 market layers · 4 signal families",
+  },
+  {
     period: "Jun–Aug 2026",
     company: "KNQ Technology",
     role: "Sport AI Agent Intern",
@@ -327,8 +336,8 @@ export default function Home() {
                 <span className="typing-cursor" aria-hidden="true" />
               </p>
               <p className="hero-intro">
-                HKUST RMBI student working across quantitative research, AI/data systems, and investor-facing
-                product communication.
+                HKUST RMBI student working across U.S. equities operations, quantitative research, AI/data
+                systems, and investor-facing product communication.
               </p>
               <div className="hero-actions">
                 <button className="button button-primary" type="button" onClick={() => scrollTo("projects")}>
@@ -342,6 +351,10 @@ export default function Home() {
                 <div>
                   <dt>Academic base</dt>
                   <dd>HKUST BSc in RMBI · Mathematics Minor</dd>
+                </div>
+                <div>
+                  <dt>Current role</dt>
+                  <dd>U.S. Equities Operations Intern, BIT</dd>
                 </div>
                 <div>
                   <dt>Current direction</dt>
@@ -394,6 +407,13 @@ export default function Home() {
                 I am a Hong Kong–based HKUST student studying Risk Management &amp; Business Intelligence,
                 with a Mathematics minor. My work sits where market context, quantitative validation,
                 and AI-enabled systems meet.
+              </p>
+              <p>
+                During a c. 8-week U.S. Equities Operations internship at BIT, I produced daily briefs across
+                U.S. equity, sector and single-stock developments, integrating macro indicators, Treasury
+                yields, earnings releases and cross-asset signals. I translated recurring market themes,
+                market information, user feedback and product requirements into investor-education and
+                U.S. equities product-operations inputs.
               </p>
               <p>
                 Across quantitative research, AI workflow development and product execution, I focus on

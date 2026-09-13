@@ -88,6 +88,15 @@ const agentModes: Record<AgentMode, { label: string; code: string; headline: str
 
 const experience = [
   {
+    track: "operations" as const,
+    period: "Aug–Sep 2026 · c. 8 weeks",
+    company: "BIT",
+    role: "U.S. Equities Operations Intern",
+    status: "Market-information operations",
+    description: "Produced daily structured briefs across 3 market layers—U.S. equities, sectors and single stocks—integrating 4 signal families: macroeconomic indicators, Treasury yields, earnings releases and cross-asset signals. Tracked sector rotation, earnings catalysts and relative performance to translate recurring themes into investor-education materials, then consolidated market information, user feedback and product requirements into U.S. equities product-operations inputs. Scope was market information, investor education and product operations—not trade execution, investment advice or research-recommendation authority.",
+    evidence: "c. 8 weeks · daily briefs · 3 market layers · 4 signal families",
+  },
+  {
     track: "engineering" as const,
     period: "Jun–Aug 2026",
     company: "KNQ Technology",
